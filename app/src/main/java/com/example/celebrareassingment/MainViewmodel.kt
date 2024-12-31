@@ -82,7 +82,6 @@ class MainViewModel:ViewModel() {
             currentIndex--
             _textData.value = history[currentIndex]
         }
-
     }
 
     fun updateFontFamily(fontFamily: FontFamily) {

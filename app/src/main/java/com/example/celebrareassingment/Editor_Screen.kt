@@ -188,9 +188,7 @@ fun Editor_Screen(modifier: Modifier, viewModel: MainViewModel) {
                 colors = ButtonDefaults.buttonColors(Color.White),
                 border = ButtonDefaults.outlinedButtonBorder
             ) {
-
-                Text(text ="${textData.fontSize.toInt()}")
-
+                Text("${textData.fontSize.toInt()}")
             }
 
             Button(
@@ -282,6 +280,9 @@ fun Editor_Screen(modifier: Modifier, viewModel: MainViewModel) {
 
             }
         }
+
+        Spacer(modifier = Modifier.height(25.dp))
+
         Row {
             TextField(
                 value = inputText,
@@ -293,7 +294,7 @@ fun Editor_Screen(modifier: Modifier, viewModel: MainViewModel) {
             Button(onClick = {
                 if (inputText.isNotBlank()) {
                     viewModel.updateTextContent(inputText)
-                    inputText = "" // Clear the input field
+                    inputText = ""
                 }
             }) {
                 Text("Add Text")
